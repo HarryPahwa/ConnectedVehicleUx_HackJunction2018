@@ -1,0 +1,74 @@
+<service name="Media" namespace="kanzi" package="com.rightware.connect.media" description="Media playback interface">
+
+  <method name="playPlaylist" description="Starts playing given playlist from the first track">
+    <argument name="playlistId" datatype="int"/>
+  </method>
+
+  <!-- Routed via server for example purposes only -->
+  <method name="playTrack" return="bool" description="Starts playing given track in given playlist">
+    <argument name="playlistId" datatype="int"/>
+    <argument name="trackId" datatype="int"/>
+  </method>
+
+  <!-- This method is routed via default unreliable bearer, that being UDP -->
+  <method name="play" description="Continues playback of current track" />
+  <method name="stop" description="Stops playback of current track" />
+  <!-- This method is routed via default unreliable bearer, that being inherited from the server connection bearer -->
+  <method name="pause" description="Pauses playback of current track" />
+
+  <event name="progress" description="Notification of playback state change">
+    <argument name="position" datatype="int">
+      <attribute key="DisplayName" value="Playback position (s)"/>
+      <attribute key="Tooltip" value="Playback position in seconds."/>
+    </argument>
+    <argument name="duration" datatype="int">
+      <attribute key="DisplayName" value="Track duration (s)"/>
+      <attribute key="Tooltip" value="Track duration in seconds."/>
+    </argument>
+  </event>
+
+  <method name="next" description="Advances to next track" />
+  <method name="previous" description="Goes back to previous track" />
+
+  <runtime-data>
+    <playback>                                                        
+        <state type="int" />                                        
+        <position type="string" default="00:00" />                
+        <duration type="string" default="00:00" />                
+        <offset type="float" />                                     
+    </playback>                                                       
+    <current_playlist>                                                
+        <id type="int" />                                           
+        <name type="string" />                                      
+        <tracks type="string" />                                    
+        <source type="string" />                                    
+    </current_playlist>                                               
+    <current_track>                                                   
+        <id type="int" />                                           
+        <name type="string" />                                      
+        <artist type="string" />                                    
+        <album_id type="int" />                                     
+        <uri type="string" />                                       
+        <image type="string" />                                     
+        <source type="string" />                                    
+    </current_track>                                                  
+    <previous_track>                                                  
+        <id type="int" />                                           
+        <name type="string" />                                      
+        <artist type="string" />                                    
+        <album_id type="int" />                                     
+        <uri type="string" />                                       
+        <image type="string" />                                     
+        <source type="string" />                                    
+    </previous_track>                                                 
+    <next_track>                                                      
+        <id type="int" />                                           
+        <name type="string" />                                      
+        <artist type="string" />                                    
+        <album_id type="int" />                                     
+        <uri type="string" />                                       
+        <image type="string" />                                     
+        <source type="string" />                                    
+    </next_track>
+  </runtime-data>
+</service>

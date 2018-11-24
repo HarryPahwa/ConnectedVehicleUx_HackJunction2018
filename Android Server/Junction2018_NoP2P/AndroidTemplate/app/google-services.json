@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1075278337003",
+    "firebase_url": "https://maplevodkahr.firebaseio.com",
+    "project_id": "maplevodkahr",
+    "storage_bucket": "maplevodkahr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075278337003:android:70bd2330ad260fb8",
+        "android_client_info": {
+          "package_name": "com.rightware.junction2018"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075278337003-lbssqssaqft1v3l1sffv50scn4lp5j21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rightware.junction2018",
+            "certificate_hash": "9b426196fa098c6c745a1fc2b5a7354f8bb28f55"
+          }
+        },
+        {
+          "client_id": "1075278337003-gjk0osduojefjgij9ch0llqast09654b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz4WBTfWwSTszcSBgKtYk1X_oQ-ewEAgc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075278337003-gjk0osduojefjgij9ch0llqast09654b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075278337003-a62p04hfmtochev7vgc7gvcu36megthp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.hsingh.Heart-Control"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

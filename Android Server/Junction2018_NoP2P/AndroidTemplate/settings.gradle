@@ -1,0 +1,1 @@
+include ':app', ':kanziconnect-release', ':kanziconnect-debug'

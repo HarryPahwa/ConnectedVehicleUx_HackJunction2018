@@ -1,0 +1,50 @@
+<service name="Sensor" namespace="kanzi" package="com.rightware.connect.sensor" description="interface for motion tracking sensors">
+
+  <method name="setAccelerometerState" description="Enable / Disable accelerometer.">
+    <argument name="enabled" datatype="bool"/>
+  </method>
+
+  <method name="setGravitySensorState" description="Enable / Disable gravity sensor.">
+    <argument name="enabled" datatype="bool"/>
+  </method>
+
+  <method name="setGyroscopeState" description="Enable / Disable gyroscope.">
+    <argument name="enabled" datatype="bool"/>
+  </method>
+
+  <method name="setCompassState" description="Enable / Disable compass.">
+    <argument name="enabled" datatype="bool"/>
+  </method>
+
+  <runtime-data>
+    <accelerometer>                                  
+        <enabled type="bool" />                    
+        <x type="float" />                         
+        <y type="float" />                         
+        <z type="float" />                         
+    </accelerometer>                                 
+    <gravity>                                        
+        <enabled type="bool" />                    
+        <x type="float" />                         
+        <y type="float" />                         
+        <z type="float" />                         
+    </gravity>                                       
+    <gyroscope>                                      
+        <enabled type="bool" />                    
+        <x type="float" />                         
+        <y type="float" />                         
+        <z type="float" />                         
+    </gyroscope>  
+    <compass>
+        <enabled type="bool" />                    
+        <x type="float" />                         
+        <y type="float" />                         
+        <z type="float" />                         
+    </compass>
+    <pressure>
+        <enabled type="bool" />
+        <value type="float" />
+    </pressure>    
+  </runtime-data>
+  
+</service>

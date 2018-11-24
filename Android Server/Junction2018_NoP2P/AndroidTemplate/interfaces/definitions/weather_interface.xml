@@ -1,0 +1,60 @@
+<service name="Weather" namespace="kanzi" package="com.rightware.connect.weather" description="interface for weather data integration">
+
+  <method name="setCity" description="Sets the name of the city whom weather is to be shown">
+    <argument name="cityname" datatype="string" />
+  </method>
+  
+  <event name="searchStateChanged" description="emit when ever search state changes">
+    <argument name="state" datatype="int" />
+  </event>
+  
+  <runtime-data>
+    <search>
+      <!-- 
+        Latest query criteria. Currently always "city"
+      -->
+      <criteria type="string" />
+
+      <!--
+        Latest search data.
+      -->
+      <data type="string" />
+
+      <!-- 
+       0 = Initial value
+       1 = Searching
+       2 = Search complete, have results
+       3 = Search complete, no results.
+       4 = Search failed and error occured.
+      -->
+      <state type="int" />
+
+      <!-- In case type=4 this holds a error description -->
+      <errordescription type="string" />
+    </search>
+    
+    <result>
+    
+      <!-- Celcius -->
+      <temperature type="float" />
+      
+      <!-- m/s -->
+      <windspeed type="float" />
+      
+      <!-- meteorological wind direction -->
+      <winddirection type="int" />
+      
+      <!-- percentage -->
+      <humidity type="int" />
+      
+      <!-- Cloudiness percentage -->
+      <cloudiness type="int" />
+    
+      <!-- Weather icon, see https://openweathermap.org/weather-conditions for details -->
+      <!-- Effectively, http://openweathermap.org/img/w/ + <value-of-icon> + ".png" will download the right icon for weather -->
+      <icon type="string" />    
+      
+    </result>
+  </runtime-data>
+  
+</service>
