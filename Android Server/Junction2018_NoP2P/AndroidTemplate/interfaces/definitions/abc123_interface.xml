@@ -1,0 +1,12 @@
+<service name="abc123" namespace="kanzi" package="com.rightware.connect.abc123" description="interface for Junction sensors">
+	<runtime-data>
+		<default>
+			<heartrate type="int" default="116" writable="1"/>
+			<stress type="bool" default="false" writable="1"/>
+			<accident type="bool" default="false" writable="1"/>
+			<sleepstatus type="bool" default="false" writable="1"/>
+			<objectproximity type="bool" default="false" writable="1"/>
+			<element_1 type="int" default="0" writable="1"/>
+		</default>
+	</runtime-data>
+</service>
