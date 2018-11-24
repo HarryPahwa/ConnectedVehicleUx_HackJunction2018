@@ -1,0 +1,22 @@
+import os
+
+try:
+    kanzi_home = os.environ['KANZI_HOME']
+    engine_root = os.path.join(kanzi_home, "Engine")
+    print("Found KANZI_HOME: " + kanzi_home)
+except:
+    print("KANZI_HOME environment variable not found.")
+    
+try:
+    connect_home = os.environ['KANZI_CONNECT_SDK']
+    print("Found KANZI_CONNECT_SDK: " + connect_home)
+except:
+    print("KANZI_CONNECT_SDK environment variable not found.")
+    
+project_location = Dir(".").path
+Export("project_location")
+
+default_gl_profile = "GL"
+supported_gl_profiles = ["GL"]
+
+execfile(os.path.join("..", "common", "start_build.py"))

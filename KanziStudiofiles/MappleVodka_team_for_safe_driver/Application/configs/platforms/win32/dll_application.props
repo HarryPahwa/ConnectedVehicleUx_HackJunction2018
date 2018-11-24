@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(KANZI_CONNECT_SDK)\build\configs\platforms\win32\dll_application.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <KanziEnginePath>$(KANZI_HOME)\Engine</KanziEnginePath>
+    <PluginDllPath>$(KANZI_CONNECT_SDK)\output\Win32\plugins</PluginDllPath>
+    <ProjectRootPath>..\..\..</ProjectRootPath>
+    <KanziConnectSdkPath>$(KANZI_CONNECT_SDK)</KanziConnectSdkPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(ProjectRootPath)\output\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectRootPath)\output\$(PlatformName)\$(Configuration)\intermediate\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <KanziConnectIncludeDirectories>$(ProjectRootPath)\src;%(KanziConnectIncludeDirectories)</KanziConnectIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <KanziConnectDebugLibraryDirectories>$(KanziEnginePath)\output\$(PlatformName)\GL_vs2015_Debug_DLL\;$(KanziEnginePath)\output\$(PlatformName)\GL_vs2015_Debug\;%(KanziConnectDebugLibraryDirectories)</KanziConnectDebugLibraryDirectories>
+      <KanziConnectReleaseLibraryDirectories>$(KanziEnginePath)\output\$(PlatformName)\GL_vs2015_Release_DLL\;$(KanziEnginePath)\output\$(PlatformName)\GL_vs2015_Release\;%(KanziConnectReleaseLibraryDirectories)</KanziConnectReleaseLibraryDirectories>
+      <KanziConnectDebugDependencies>%(KanziConnectDebugDependencies)</KanziConnectDebugDependencies>
+      <KanziConnectReleaseDependencies>%(KanziConnectReleaseDependencies)</KanziConnectReleaseDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="KanziEnginePath">
+      <Value>$(KanziEnginePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ProjectRootPath">
+      <Value>$(ProjectRootPath)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
