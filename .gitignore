@@ -1,2 +1,4 @@
 *.lock
 **/*.lock
+*.cache
+**/*.cache
