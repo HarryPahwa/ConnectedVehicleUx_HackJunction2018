@@ -23,7 +23,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.rightware.connect.*;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -39,7 +38,12 @@ public class WeatherService extends WeatherServiceConcept {
     private RequestQueue m_requestQueue;
 
     private String m_city;
-    public int heartRate=0;
+    public int heartRateMan =0;
+    public boolean stressValue=false;
+    public boolean accidentValue=false;
+    public boolean proximityValue=false;
+    public boolean sleepValue=false;
+    public int weatherVal=0;
     protected RequestQueue getRequestQueue() {
         if (m_requestQueue == null) {
             Cache cache = new DiskBasedCache(m_context.getCacheDir(), 1024 * 1024); // 1MB cap
@@ -73,9 +77,9 @@ public class WeatherService extends WeatherServiceConcept {
      * @param cloudiness percents
      * @param icon URL to picture describing the feature.
      */
-    void setupRuntimeDataSearchResult(double temperature, double windspeed, int winddirection, int humidity, int cloudiness, String icon) {
+    void setupRuntimeDataSearchResult(double temperature, boolean windspeed, int winddirection, boolean humidity, boolean cloudiness, int icon) {
         runtimeData().setValue("result.temperature", (float)temperature);
-        runtimeData().setValue("result.windspeed", (float)windspeed);
+        runtimeData().setValue("result.windspeed", windspeed);
         runtimeData().setValue("result.winddirection", winddirection);
         runtimeData().setValue("result.humidity", humidity);
         runtimeData().setValue("result.cloudiness", cloudiness);
@@ -86,7 +90,7 @@ public class WeatherService extends WeatherServiceConcept {
      * Clear all the weather contents
      */
     void clearRuntimeDataSearchResult() {
-        setupRuntimeDataSearchResult(0.0, 0.0, 0, 0, 0, "");
+        setupRuntimeDataSearchResult(0.0, false, 0, false, false, 0);
     }
 
     /**
@@ -104,12 +108,12 @@ public class WeatherService extends WeatherServiceConcept {
                 temperature = main.getDouble("temp");
             }
 
-            int humidity = 0;
-            if (main.has("humidity")) {
-                humidity = main.getInt("humidity");
-            }
+            boolean humidity = accidentValue;
+//            if (main.has("humidity")) {
+//                humidity = main.getInt("humidity");
+//            }
 
-            int cloudiness = heartRate;
+            boolean cloudiness = sleepValue;
 //            if (result.has("clouds")) {
 //                JSONObject clouds = result.getJSONObject("clouds");
 //                if (clouds.has("all")) {
@@ -117,30 +121,30 @@ public class WeatherService extends WeatherServiceConcept {
 //                }
 //            }
 
-            double windspeed = 0.0;
-            int winddirection = 0;
-            if (result.has("wind")) {
-                JSONObject wind = result.getJSONObject("wind");
-                if (wind.has("speed")) {
-                    windspeed = wind.getDouble("speed");
-                }
-                if (wind.has("deg")) {
-                    winddirection = wind.getInt("deg");
-                }
-            }
+            boolean windspeed = stressValue;
+            int winddirection = heartRateMan;
+//            if (result.has("wind")) {
+//                JSONObject wind = result.getJSONObject("wind");
+//                if (wind.has("speed")) {
+//                    windspeed = wind.getDouble("speed");
+//                }
+//                if (wind.has("deg")) {
+//                    winddirection = wind.getInt("deg");
+//                }
+//            }
 
-            String icon = "";
-            if (result.has("weather")) {
-                JSONArray weather = result.getJSONArray("weather");
-                if (weather != null && weather.length() > 0) {
-                    if (weather.getJSONObject(0).has("icon")) {
-                        icon = weather.getJSONObject(0).getString("icon");
-                        if (icon.length() > 0) {
-                            icon = "http://openweathermap.org/img/w/" + icon + ".png";
-                        }
-                    }
-                }
-            }
+            int icon = weatherVal;
+//            if (result.has("weather")) {
+//                JSONArray weather = result.getJSONArray("weather");
+//                if (weather != null && weather.length() > 0) {
+//                    if (weather.getJSONObject(0).has("icon")) {
+//                        icon = weather.getJSONObject(0).getString("icon");
+//                        if (icon.length() > 0) {
+//                            icon = "http://openweathermap.org/img/w/" + icon + ".png";
+//                        }
+//                    }
+//                }
+//            }
             setupRuntimeDataSearchResult(temperature, windspeed, winddirection, humidity, cloudiness, icon);
             runtimeData().setValue("search.state", 2);
             runtimeData().notifyModified();
@@ -225,7 +229,12 @@ public class WeatherService extends WeatherServiceConcept {
         //FirebaseStuff
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("HeartRate");
+        DatabaseReference myRef = database.getReference("HeartRate/value");
+        DatabaseReference stressRef = database.getReference("Stress/value");
+        DatabaseReference AccidentRef = database.getReference("Accident/value");
+        DatabaseReference sleepRef = database.getReference("Sleep/value");
+        DatabaseReference proximityRef = database.getReference("Proximity/value");
+        DatabaseReference weatherConditionRef = database.getReference("WeatherCondition/value");
 
         //myRef.setValue("Hello, World!");
 
@@ -235,7 +244,7 @@ public class WeatherService extends WeatherServiceConcept {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 int value = dataSnapshot.getValue(Integer.class);
-                heartRate = value;
+                heartRateMan = value;
                 Log.d(TAG, "Firebase Value is: " + value);
             }
 
@@ -246,6 +255,73 @@ public class WeatherService extends WeatherServiceConcept {
             }
         });
 
+        stressRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                boolean value = dataSnapshot.getValue(boolean.class);
+                stressValue = value;
+                Log.d(TAG, "Firebase Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        AccidentRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                boolean value = dataSnapshot.getValue(boolean.class);
+                accidentValue = value;
+                Log.d(TAG, "Firebase Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        sleepRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                boolean value = dataSnapshot.getValue(boolean.class);
+                sleepValue = value;
+                Log.d(TAG, "Firebase Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        weatherConditionRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                int value = dataSnapshot.getValue(Integer.class);
+                weatherVal = value;
+                Log.d(TAG, "Firebase Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
         getRequestQueue().add(request);
     }
 }

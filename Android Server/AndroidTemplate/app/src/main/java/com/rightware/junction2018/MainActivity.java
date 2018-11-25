@@ -18,6 +18,7 @@ import com.rightware.connect.ClientConnector;
 import com.rightware.connect.ConfigurationReader;
 import com.rightware.connect.KanziConnectContext;
 import com.rightware.connect.StringMap;
+import com.rightware.connect.abc123.Abc123Service;
 import com.rightware.connect.media.MediaService;
 import com.rightware.connect.sensor.SensorService;
 import com.rightware.connect.weather.WeatherService;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private ServiceHandler m_mediaServiceHandler;
     private ServiceHandler m_sensorServiceHandler;
     private ServiceHandler m_weatherServiceHandler;
+    private ServiceHandler m_abc123ServiceHandler;
 
     private static StringMap m_attributes;
     private static String m_ip;
@@ -234,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
             status.setTextColor(ResourcesCompat.getColor(r, R.color.colorYellow, null));
         } else {
             // Idling otherwise.
-            Log.d(TAG, "States: " + m_weatherServiceHandler.getState() + "," + m_sensorServiceHandler.getState() + "," + m_mediaServiceHandler.getState());
+            Log.d(TAG, "States: " + m_weatherServiceHandler.getState() + "," + m_sensorServiceHandler.getState() + "," + m_mediaServiceHandler.getState()+ "," + m_abc123ServiceHandler.getState());
             status.setText("IDLE");
             status.setTextColor(ResourcesCompat.getColor(r, R.color.colorWhite, null));
         }
@@ -255,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
         startMediaService();
         startSensorService();
         startWeatherService();
-
+        startAbc123Service();
         /// TODO: Add custom service start routine here.
     }
 
@@ -266,6 +268,16 @@ public class MainActivity extends AppCompatActivity {
         if (m_weatherServiceHandler == null) {
             m_weatherServiceHandler = new ServiceHandler(this, m_ip, m_port, m_attributes);
             m_weatherServiceHandler.initialize(new WeatherService(this));
+        }
+    }
+
+    /**
+     * Starts the abc123 service
+     */
+    void startAbc123Service() {
+        if (m_abc123ServiceHandler == null) {
+            m_abc123ServiceHandler = new ServiceHandler(this, m_ip, m_port, m_attributes);
+            m_abc123ServiceHandler.initialize(new Abc123Service(this));
         }
     }
 
@@ -345,5 +357,8 @@ public class MainActivity extends AppCompatActivity {
         m_sensorServiceHandler = null;
 
         /// TODO: Add custom service stop routine here.
+
+        stopServiceHandler(m_abc123ServiceHandler);
+        m_abc123ServiceHandler = null;
     }
 }

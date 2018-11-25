@@ -2,6 +2,8 @@
 
 package com.rightware.connect.weather;
 
+import android.util.Log;
+
 import com.rightware.connect.*;
 import java.util.Vector;
 
@@ -53,6 +55,7 @@ public class WeatherServiceConcept extends ExternalServiceBase {
     // Message Dispatcher
     //
     public void receive(ExternalServiceSession session, MessagePackage message) {
+        Log.d(TAG, "Bingo Bango Bongo");
         setRunningSession(session);
         String type = message.getType();
         try {
@@ -87,20 +90,20 @@ public class WeatherServiceConcept extends ExternalServiceBase {
             "      <temperature type=\"float\"/>"+
             "      "+
             "      "+
-            "      <windspeed type=\"float\"/>"+
+            "      <windspeed type=\"bool\"/>"+
             "      "+
             "      "+
             "      <winddirection type=\"int\"/>"+
             "      "+
             "      "+
-            "      <humidity type=\"int\"/>"+
+            "      <humidity type=\"bool\"/>"+
             "      "+
             "      "+
-            "      <cloudiness type=\"int\"/>"+
+            "      <cloudiness type=\"bool\"/>"+
             "    "+
             "      "+
             "      "+
-            "      <icon type=\"string\"/>    "+
+            "      <icon type=\"int\"/>    "+
             "      "+
             "    </result>"+
             "  </runtime-data>";

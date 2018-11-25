@@ -2,6 +2,8 @@
 
 package com.rightware.connect.abc123;
 
+import android.util.Log;
+
 import com.rightware.connect.*;
 import java.util.Vector;
 
@@ -72,6 +74,7 @@ public class Abc123ServiceConcept extends ExternalServiceBase {
     }
     protected void setDefaultAccident(boolean argument) {
         RuntimeDataObject_bool object = runtimeData().getBoolObject("default.accident");
+        Log.d(TAG, "Bingo Bango Bongo");
         if (object != null) {
             object.setValue(argument);
             runtimeData().notifyModified();
