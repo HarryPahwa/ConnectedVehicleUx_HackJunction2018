@@ -112,7 +112,7 @@ public class WeatherService extends WeatherServiceConcept {
 //            if (main.has("humidity")) {
 //                humidity = main.getInt("humidity");
 //            }
-            String sleepMessage = "NoViewMessage";
+            String sleepMessage = "Damn you're a good driver. Keep up the good work!";
             if(sleepValue.equals("LookAtTheCamera")) {
                 sleepMessage = "The camera is not able to pick your face up";
             } else if(sleepValue.equals("Straight")) {
