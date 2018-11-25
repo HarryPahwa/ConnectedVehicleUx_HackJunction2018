@@ -137,6 +137,8 @@ PropertyTypeLibrary/TAG_PROPERTY_TYPE_Origin
 PropertyTypeLibrary/TAG_PROPERTY_TYPE_Reflection
 Animation Clips/CountdownAnimation
 Animation Clips/Take 001
+Animation Clips/CountdownAnimation_1
+Animation Clips/HeartClip
 Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Camera_Root/Camera
 Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Camera_Root/Camera_Interest
 Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Bottom
@@ -340,6 +342,8 @@ Screens/Screen/RootPage/Weather/Background
 Screens/Screen/RootPage/Weather/Prefab Placeholder 2D
 Screens/Screen/RootPage/Weather/Text Block 2D
 Screens/Screen/RootPage/Weather/Speedometer
+Screens/Screen/RootPage/Weather/Coverflow
+Screens/Screen/RootPage/Weather/Button 2D
 Screens/Screen/RootPage/Frame/Frame/RootNode/Frame
 Screens/Screen/RootPage/Frame/Frame/RootNode
 Screens/Screen/RootPage/Frame/Frame/Camera
@@ -349,6 +353,7 @@ Screens/Screen/RootPage/NavigationButtons/Previous/Image
 Screens/Screen/RootPage/NavigationButtons/Next/Image
 Screens/Screen/RootPage/NavigationButtons/Previous
 Screens/Screen/RootPage/NavigationButtons/Next
+Screens/Screen/RootPage/NavigationButtons/Button 2D
 Screens/Screen/RootPage/Header/Blinker_left
 Screens/Screen/RootPage/Header/Signal
 Screens/Screen/RootPage/Header/time
@@ -520,6 +525,37 @@ Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model
 Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode
 Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene
 Prefabs/Cluster Gauges/Cluster Gauges
+Prefabs/Album/Album/PrimitiveMeshInternal
+Prefabs/Album/Album
+Prefabs/Coverflow/Coverflow/Scene/Reflection plane/PrimitiveMeshInternal
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_1
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_2
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_3
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_4
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_5
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_6
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_7
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_8
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_9
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_10
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_11
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_12
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_13
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_14
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_15
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_16
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_17
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_18
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_19
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_20
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D/Album_21
+Prefabs/Coverflow/Coverflow/Scene/Camera
+Prefabs/Coverflow/Coverflow/Scene/Directional Light
+Prefabs/Coverflow/Coverflow/Scene/Reflection plane
+Prefabs/Coverflow/Coverflow/Scene/Trajectory List Box 3D
+Prefabs/Coverflow/Coverflow/Scene
+Prefabs/Coverflow/Coverflow
 Prefabs/Frame
 Prefabs/Button
 Prefabs/Speedometer
@@ -530,7 +566,10 @@ Prefabs/Service_icon
 Prefabs/MediaWidget
 Prefabs/Progress Bar
 Prefabs/Cluster Gauges
+Prefabs/Album
+Prefabs/Coverflow
 Animation Data/Driver.CountdownTimer
+Animation Data/Driver.CountdownTimer_1
 Data Sources/Content
 Data Sources/Cluster
 Data Sources/Media
@@ -653,6 +692,16 @@ Resource Files/Images/RailFull.png
 Resource Files/Images/RpmGauge.png
 Resource Files/Images/SpeedNeedle.png
 Resource Files/Images/SpeedGauge.png
+Resource Files/Images/Album Cover 1.png
+Resource Files/Images/Album Cover 2.png
+Resource Files/Images/Album Cover 3.png
+Resource Files/Images/Album Cover 4.png
+Resource Files/Images/Album Cover 5.png
+Resource Files/Images/Album Cover 6.png
+Resource Files/Images/Album Cover 7.png
+Resource Files/Images/Album Cover 8.png
+Resource Files/Images/Album Cover 9.png
+Resource Files/Images/Album Cover 10.png
 Resource Files/Fonts/dinnextltpro-bold.otf
 Resource Files/Fonts/dinnextltpro-light.otf
 Resource Files/Fonts/dinnextltpro-regular.ttf
@@ -698,6 +747,16 @@ Textures/RailFull
 Textures/RpmGauge
 Textures/SpeedNeedle
 Textures/SpeedGauge
+Textures/Album Cover 1
+Textures/Album Cover 2
+Textures/Album Cover 3
+Textures/Album Cover 4
+Textures/Album Cover 5
+Textures/Album Cover 6
+Textures/Album Cover 7
+Textures/Album Cover 8
+Textures/Album Cover 9
+Textures/Album Cover 10
 Styles/Text Block 2D Style
 State Managers/Button State Manager
 State Managers/PlayButton State Manager
