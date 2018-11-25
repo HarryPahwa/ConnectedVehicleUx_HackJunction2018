@@ -1,0 +1,15 @@
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes.dex : \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\BuildConfig.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\junctionclustertemplate.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\R$attr.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\R$drawable.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\R$layout.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\R$mipmap.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\R$string.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\junctionclustertemplate\R.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\KanziActivity.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\KanziNativeLibrary.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\KanziResourceFile$ResourceFile.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\KanziResourceFile.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\classes\com\rightware\kanzi\KanziView.class \
+C:\Users\Admin\Documents\GitHub\ConnectedVehicleUx_HackJunction2018\KanziStudiofiles\MappleVodka_team_for_safe_driver\Application\output\android\dexedLibs\annotations-e01f8b2948cc759cd62975460de13545.jar \

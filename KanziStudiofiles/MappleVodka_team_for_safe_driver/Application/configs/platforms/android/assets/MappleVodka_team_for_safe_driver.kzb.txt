@@ -1,4 +1,4 @@
-Files:
+﻿Files:
 PropertyTypeLibrary/Button.FactoryContentButtonDisabled
 PropertyTypeLibrary/Button.FactoryContentButtonText
 PropertyTypeLibrary/Car.CubemapColor
@@ -78,6 +78,13 @@ PropertyTypeLibrary/Diagnostics.logWrite.content
 PropertyTypeLibrary/Diagnostics.logWrite.level
 PropertyTypeLibrary/Diagnostics.logWrite.timestamp
 PropertyTypeLibrary/Diagnostics.logWrite.token
+PropertyTypeLibrary/Driver.accident
+PropertyTypeLibrary/Driver.CountdownTimer
+PropertyTypeLibrary/Driver.stress
+PropertyTypeLibrary/Driver.WeatherType
+PropertyTypeLibrary/Gauges.Gear
+PropertyTypeLibrary/Gauges.RPM
+PropertyTypeLibrary/Gauges.Speed
 PropertyTypeLibrary/Junction_ClusterTemplate.Service.content
 PropertyTypeLibrary/Junction_ClusterTemplate.Service.servicename
 PropertyTypeLibrary/Junction_ClusterTemplate.Service_icon.Image
@@ -88,6 +95,7 @@ PropertyTypeLibrary/Media.playTrack.trackId
 PropertyTypeLibrary/Media.progress.duration
 PropertyTypeLibrary/Media.progress.position
 PropertyTypeLibrary/offset
+PropertyTypeLibrary/ProgressBar.ProgressBarProgress
 PropertyTypeLibrary/Sensor.setAccelerometerState.enabled
 PropertyTypeLibrary/Sensor.setCompassState.enabled
 PropertyTypeLibrary/Sensor.setGravitySensorState.enabled
@@ -127,8 +135,36 @@ PropertyTypeLibrary/Weather.setCity.cityname
 PropertyTypeLibrary/TAG_PROPERTY_TYPE_Transparent
 PropertyTypeLibrary/TAG_PROPERTY_TYPE_Origin
 PropertyTypeLibrary/TAG_PROPERTY_TYPE_Reflection
-Animation Clips/Animation Clip
+Animation Clips/CountdownAnimation
+Animation Clips/Take 001
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Camera_Root/Camera
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Camera_Root/Camera_Interest
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Bottom
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Wheels
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Grill
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Bumper
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/CarBadge
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Taillights
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Interior
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/CarBody
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_Windows
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car/Car_HeadlightsGlass
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Camera_Root
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Shadowplane
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Car
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Point1
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Point
+Screens/Screen/RootPage/Speedometer/Car/car/RootNode
+Screens/Screen/RootPage/Speedometer/Car/car
 Screens/Screen/RootPage/Speedometer/Speedometer
+Screens/Screen/RootPage/Speedometer/Text Block 2D_1
+Screens/Screen/RootPage/Speedometer/Lines
+Screens/Screen/RootPage/Speedometer/Car
+Screens/Screen/RootPage/Speedometer/Text Block 2D_2
+Screens/Screen/RootPage/Speedometer/Progress Bar
+Screens/Screen/RootPage/Speedometer/Text Block 2D_3
+Screens/Screen/RootPage/Speedometer/Text Block 2D
+Screens/Screen/RootPage/Speedometer/Cluster Gauges
 Screens/Screen/RootPage/Media/Controls/MediaControls/SongInfo/SongName
 Screens/Screen/RootPage/Media/Controls/MediaControls/SongInfo/Artist
 Screens/Screen/RootPage/Media/Controls/MediaControls/Progress/ProgressBar/Fill
@@ -189,9 +225,6 @@ Screens/Screen/RootPage/System/Parking
 Screens/Screen/RootPage/System/Car
 Screens/Screen/RootPage/System/speedometer_small
 Screens/Screen/RootPage/System/ControlButtons
-Screens/Screen/RootPage/Sensor/Perimeter/Dot
-Screens/Screen/RootPage/Sensor/Perimeter
-Screens/Screen/RootPage/Sensor/G-meter
 Screens/Screen/RootPage/Services/Titles/System
 Screens/Screen/RootPage/Services/Titles/Cluster
 Screens/Screen/RootPage/Services/Titles/Media
@@ -248,6 +281,65 @@ Screens/Screen/RootPage/Services/Services/SensorService_1
 Screens/Screen/RootPage/Services/Services/SensorService_2
 Screens/Screen/RootPage/Services/Titles
 Screens/Screen/RootPage/Services/Services
+Screens/Screen/RootPage/Sensor/Perimeter/Dot
+Screens/Screen/RootPage/Sensor/Perimeter
+Screens/Screen/RootPage/Sensor/G-meter
+Screens/Screen/RootPage/Attention/Att_pic
+Screens/Screen/RootPage/Attention/Eyes
+Screens/Screen/RootPage/Attention/Att
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Camera_Root/Camera
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Camera_Root/Camera_Interest
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Bottom
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Wheels
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Grill
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Bumper
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/CarBadge
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Taillights
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Interior
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/CarBody
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Windows
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_HeadlightsGlass
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Camera_Root
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Shadowplane
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Car
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Point1
+Screens/Screen/RootPage/Warning/Car/car/RootNode/Point
+Screens/Screen/RootPage/Warning/Car/car/RootNode
+Screens/Screen/RootPage/Warning/Car/car
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Camera_Root/Camera
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Camera_Root/Camera_Interest
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Bottom
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Wheels
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Grill
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Bumper
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/CarBadge
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Taillights
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Interior
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/CarBody
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_Windows
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car/Car_HeadlightsGlass
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Camera_Root
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Shadowplane
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Car
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Point1
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode/Point
+Screens/Screen/RootPage/Warning/Car_1/car/RootNode
+Screens/Screen/RootPage/Warning/Car_1/car
+Screens/Screen/RootPage/Warning/Text Block 2D
+Screens/Screen/RootPage/Warning/Text Block 2D_1
+Screens/Screen/RootPage/Warning/Cancel call
+Screens/Screen/RootPage/Warning/Car
+Screens/Screen/RootPage/Warning/Car_1
+Screens/Screen/RootPage/Heartrate (stressed)/Countdown
+Screens/Screen/RootPage/Heartrate (stressed)/Text
+Screens/Screen/RootPage/Heartrate (stressed)/Heartrate
+Screens/Screen/RootPage/Heartrate (stressed)/Heart
+Screens/Screen/RootPage/Heartrate (stressed)/Heart_transp
+Screens/Screen/RootPage/Heartrate (stressed)/Heartrate_1
+Screens/Screen/RootPage/Weather/Background
+Screens/Screen/RootPage/Weather/Prefab Placeholder 2D
+Screens/Screen/RootPage/Weather/Text Block 2D
+Screens/Screen/RootPage/Weather/Speedometer
 Screens/Screen/RootPage/Frame/Frame/RootNode/Frame
 Screens/Screen/RootPage/Frame/Frame/RootNode
 Screens/Screen/RootPage/Frame/Frame/Camera
@@ -266,8 +358,13 @@ Screens/Screen/RootPage/BG
 Screens/Screen/RootPage/Speedometer
 Screens/Screen/RootPage/Media
 Screens/Screen/RootPage/System
-Screens/Screen/RootPage/Sensor
 Screens/Screen/RootPage/Services
+Screens/Screen/RootPage/Sensor
+Screens/Screen/RootPage/Attention
+Screens/Screen/RootPage/Warning
+Screens/Screen/RootPage/Heartrate (stressed)
+Screens/Screen/RootPage/Weather
+Screens/Screen/RootPage/Alert
 Screens/Screen/RootPage/Frame
 Screens/Screen/RootPage/NavigationButtons
 Screens/Screen/RootPage/MediaWidget
@@ -296,6 +393,7 @@ Material Types/CarPhong
 Material Types/CarPhongCube
 Material Types/CarPhongTextured
 Material Types/CarPhongTexturedCube
+Material Types/GaugePhongTextured
 Materials/VertexPhongMaterial
 Materials/VertexPhongCubeMaterial
 Materials/VertexPhongMorphMaterial
@@ -325,6 +423,10 @@ Materials/CarLicense
 Materials/Headlights
 Materials/CarWindow
 Materials/CarHeadlight
+Materials/GaugeOuterRim
+Materials/GaugeRPM
+Materials/GaugeNeedle
+Materials/GaugeSpeed
 Brushes/DefaultBackground
 Brushes/FactoryContent White Color Brush
 Brushes/FactoryContent Light Grey Color Brush
@@ -337,6 +439,10 @@ Brushes/FactoryContent Button Border Press Brush
 Brushes/FactoryContent Button Border Cancel Brush
 Brushes/OffWhite
 Brushes/White
+Brushes/Color Brush
+Brushes/Color Brush_1
+Brushes/Rainy
+Brushes/Color Brush_2
 Mesh Data/Frame
 Mesh Data/Shadowplane
 Mesh Data/Car_Bottom
@@ -349,6 +455,10 @@ Mesh Data/Car_Interior
 Mesh Data/CarBody
 Mesh Data/Car_Windows
 Mesh Data/Car_HeadlightsGlass
+Mesh Data/RPMTable
+Mesh Data/RPMNeedlePlane
+Mesh Data/SpeedTable
+Mesh Data/SpeedNeedlePlane
 Render Passes/Coverflow Rendering No Culling/Clear Render Pass
 Render Passes/Coverflow Rendering No Culling/Draw Objects Render Pass
 Render Passes/Coverflow Rendering No Culling
@@ -358,7 +468,7 @@ Prefabs/Frame/Frame
 Prefabs/Button/Button/Body
 Prefabs/Button/Button/Title
 Prefabs/Button/Button
-Prefabs/Speedometer/Speedometer/Speed
+Prefabs/Speedometer/Speedometer/Speed2
 Prefabs/Speedometer/Speedometer/Unit
 Prefabs/Speedometer/Speedometer
 Prefabs/Song list item/Song list item/Stack Layout 2D/SongInfo/SongName
@@ -381,6 +491,35 @@ Prefabs/MediaWidget/MediaWidget/SongInfo/Artist
 Prefabs/MediaWidget/MediaWidget/Image
 Prefabs/MediaWidget/MediaWidget/SongInfo
 Prefabs/MediaWidget/MediaWidget
+Prefabs/Progress Bar/Progress Bar/RailEndLeft
+Prefabs/Progress Bar/Progress Bar/Rail
+Prefabs/Progress Bar/Progress Bar/RailFull
+Prefabs/Progress Bar/Progress Bar/RailEndRight
+Prefabs/Progress Bar/Progress Bar/Progress value
+Prefabs/Progress Bar/Progress Bar/Progress unit
+Prefabs/Progress Bar/Progress Bar
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Camera Root/Camera
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Camera Root/Camera Interest
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/RPM Gauge/RPM Table/Gear
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/RPM Gauge/RPM Needle/RPM Needle Plane/RPM Needle Point Light
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/RPM Gauge/RPM Needle/RPM Needle Plane
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/RPM Gauge/RPM Table
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/RPM Gauge/RPM Needle
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Table/Stack Layout 3D/SpeedValue
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Table/Stack Layout 3D/SpeedUnit
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Table/Stack Layout 3D
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Needle/Speed Needle Plane/Speed Needle Point Light
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Needle/Speed Needle Plane
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Table
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge/Speed Needle
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/RPM Gauge
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model/Speed Gauge
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Camera Root
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Directional Light
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode/Model
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene/RootNode
+Prefabs/Cluster Gauges/Cluster Gauges/Gauge Scene
+Prefabs/Cluster Gauges/Cluster Gauges
 Prefabs/Frame
 Prefabs/Button
 Prefabs/Speedometer
@@ -389,6 +528,9 @@ Prefabs/speedometer_small
 Prefabs/Service
 Prefabs/Service_icon
 Prefabs/MediaWidget
+Prefabs/Progress Bar
+Prefabs/Cluster Gauges
+Animation Data/Driver.CountdownTimer
 Data Sources/Content
 Data Sources/Cluster
 Data Sources/Media
@@ -397,6 +539,7 @@ Data Sources/Diagnostics
 Data Sources/Service
 Data Sources/Weather
 Data Sources/Sensor
+Data Sources/Abc123
 Page Transitions/Default Transitions
 Resource Files/Images/cubemaps/mipmaps/DefaultCubeMap.dds posX_128x128.png
 Resource Files/Images/cubemaps/mipmaps/DefaultCubeMap.dds posX_64x64.png
@@ -463,7 +606,6 @@ Resource Files/Images/mipmaps/DefaultTextureImage_4x4.png
 Resource Files/Images/mipmaps/DefaultTextureImage_2x2.png
 Resource Files/Images/mipmaps/DefaultTextureImage_1x1.png
 Resource Files/Images/DefaultBackground.png
-Resource Files/Images/DefaultTextureImage.png
 Resource Files/Images/bg.png
 Resource Files/Images/ic_back.png
 Resource Files/Images/ic_blinker.png
@@ -495,6 +637,22 @@ Resource Files/Images/Asset 123x.png
 Resource Files/Images/4G_80.png
 Resource Files/Images/ic_a02_low_beam_dipped_beam.png
 Resource Files/Images/ic_a09_position_lights_side_lights.png
+Resource Files/Images/steklo-dozhd-kapli-razmytie.jpg
+Resource Files/Images/gettyimages-609446047-1024x1024.jpg
+Resource Files/Images/sky-sunny-clouds-cloudy.jpg
+Resource Files/Images/pexels-photo-414659.jpeg
+Resource Files/Images/kisspng-heart-3d-computer-graphics-clip-art-cross-heart-5b5eaf02912407.5214368615329318425945.png
+Resource Files/Images/345.png
+Resource Files/Images/attention.jpg
+Resource Files/Images/eye-png-42324.png
+Resource Files/Images/eyes2.png
+Resource Files/Images/eyes3.png
+Resource Files/Images/Rail.png
+Resource Files/Images/RailEnd.png
+Resource Files/Images/RailFull.png
+Resource Files/Images/RpmGauge.png
+Resource Files/Images/SpeedNeedle.png
+Resource Files/Images/SpeedGauge.png
 Resource Files/Fonts/dinnextltpro-bold.otf
 Resource Files/Fonts/dinnextltpro-light.otf
 Resource Files/Fonts/dinnextltpro-regular.ttf
@@ -525,9 +683,26 @@ Textures/Knob
 Textures/4G_80
 Textures/ic_a02_low_beam_dipped_beam
 Textures/ic_a09_position_lights_side_lights
+Textures/steklo-dozhd-kapli-razmytie
+Textures/Snowy
+Textures/Sunny
+Textures/Cloudy
+Textures/345
+Textures/attention
+Textures/eye-png-42324
+Textures/eyes2
+Textures/eyes3
+Textures/Rail
+Textures/RailEnd
+Textures/RailFull
+Textures/RpmGauge
+Textures/SpeedNeedle
+Textures/SpeedGauge
 Styles/Text Block 2D Style
 State Managers/Button State Manager
 State Managers/PlayButton State Manager
 State Managers/RootNode State Manager
 State Managers/System State Manager
-/junction_clustertemplate
+State Managers/Weather_BG_SM
+State Managers/Gear State Manager
+/mapplevodka_team_for_safe_driver
