@@ -87,10 +87,10 @@ public class WeatherServiceConcept extends ExternalServiceBase {
             "    <result>"+
             "    "+
             "      "+
-            "      <temperature type=\"float\"/>"+
+            "      <temperature type=\"int\"/>"+
             "      "+
             "      "+
-            "      <windspeed type=\"bool\"/>"+
+            "      <windspeed type=\"String\"/>"+
             "      "+
             "      "+
             "      <winddirection type=\"int\"/>"+
@@ -99,7 +99,7 @@ public class WeatherServiceConcept extends ExternalServiceBase {
             "      <humidity type=\"bool\"/>"+
             "      "+
             "      "+
-            "      <cloudiness type=\"bool\"/>"+
+            "      <cloudiness type=\"String\"/>"+
             "    "+
             "      "+
             "      "+

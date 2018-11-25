@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
         startMediaService();
         startSensorService();
         startWeatherService();
-        startAbc123Service();
+//        startAbc123Service();
         /// TODO: Add custom service start routine here.
     }
 
@@ -274,12 +274,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Starts the abc123 service
      */
-    void startAbc123Service() {
-        if (m_abc123ServiceHandler == null) {
-            m_abc123ServiceHandler = new ServiceHandler(this, m_ip, m_port, m_attributes);
-            m_abc123ServiceHandler.initialize(new Abc123Service(this));
-        }
-    }
+//    void startAbc123Service() {
+//        if (m_abc123ServiceHandler == null) {
+//            m_abc123ServiceHandler = new ServiceHandler(this, m_ip, m_port, m_attributes);
+//            m_abc123ServiceHandler.initialize(new Abc123Service(this));
+//        }
+//    }
 
     /**
      * Starts the sensor service
@@ -358,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
 
         /// TODO: Add custom service stop routine here.
 
-        stopServiceHandler(m_abc123ServiceHandler);
-        m_abc123ServiceHandler = null;
+//        stopServiceHandler(m_abc123ServiceHandler);
+//        m_abc123ServiceHandler = null;
     }
 }

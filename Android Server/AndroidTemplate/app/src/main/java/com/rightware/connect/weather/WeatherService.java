@@ -42,7 +42,7 @@ public class WeatherService extends WeatherServiceConcept {
     public boolean stressValue=false;
     public boolean accidentValue=false;
     public boolean proximityValue=false;
-    public boolean sleepValue=false;
+    public String sleepValue="LookAtTheCamera";
     public int weatherVal=0;
     protected RequestQueue getRequestQueue() {
         if (m_requestQueue == null) {
@@ -77,8 +77,8 @@ public class WeatherService extends WeatherServiceConcept {
      * @param cloudiness percents
      * @param icon URL to picture describing the feature.
      */
-    void setupRuntimeDataSearchResult(double temperature, boolean windspeed, int winddirection, boolean humidity, boolean cloudiness, int icon) {
-        runtimeData().setValue("result.temperature", (float)temperature);
+    void setupRuntimeDataSearchResult(double temperature, String windspeed, int winddirection, boolean humidity, String cloudiness, int icon) {
+        runtimeData().setValue("result.temperature", (int)temperature);
         runtimeData().setValue("result.windspeed", windspeed);
         runtimeData().setValue("result.winddirection", winddirection);
         runtimeData().setValue("result.humidity", humidity);
@@ -90,7 +90,7 @@ public class WeatherService extends WeatherServiceConcept {
      * Clear all the weather contents
      */
     void clearRuntimeDataSearchResult() {
-        setupRuntimeDataSearchResult(0.0, false, 0, false, false, 0);
+        setupRuntimeDataSearchResult(0.0, "You're driving safe", 0, false, "LookAtTheCamera", 0);
     }
 
     /**
@@ -112,8 +112,18 @@ public class WeatherService extends WeatherServiceConcept {
 //            if (main.has("humidity")) {
 //                humidity = main.getInt("humidity");
 //            }
+            String sleepMessage = "NoViewMessage";
+            if(sleepValue.equals("LookAtTheCamera")) {
+                sleepMessage = "The camera is not able to pick your face up";
+            } else if(sleepValue.equals("Straight")) {
+                sleepMessage = "Good job looking straight ahead, you're a safe driver";
+            } else if(sleepValue.equals("Left")) {
+                sleepMessage = "On average you tend to look more left than straight. Eyes on the road please!";
+            } else if(sleepValue.equals("Right")) {
+                sleepMessage = "On average you tend to look more right than straight. Eyes on the road please!";
+            }
 
-            boolean cloudiness = sleepValue;
+            String cloudiness = sleepMessage;
 //            if (result.has("clouds")) {
 //                JSONObject clouds = result.getJSONObject("clouds");
 //                if (clouds.has("all")) {
@@ -121,7 +131,13 @@ public class WeatherService extends WeatherServiceConcept {
 //                }
 //            }
 
-            boolean windspeed = stressValue;
+            String windspeed="You're driving safe";
+            if(stressValue == false){
+                windspeed = "Vitals look good, keep driving safe";
+            } else {
+                windspeed = "Your heart rate is abnormally high. Please consider pulling over";
+            }
+
             int winddirection = heartRateMan;
 //            if (result.has("wind")) {
 //                JSONObject wind = result.getJSONObject("wind");
@@ -294,7 +310,7 @@ public class WeatherService extends WeatherServiceConcept {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                boolean value = dataSnapshot.getValue(boolean.class);
+                String value = dataSnapshot.getValue(String.class);
                 sleepValue = value;
                 Log.d(TAG, "Firebase Value is: " + value);
             }
