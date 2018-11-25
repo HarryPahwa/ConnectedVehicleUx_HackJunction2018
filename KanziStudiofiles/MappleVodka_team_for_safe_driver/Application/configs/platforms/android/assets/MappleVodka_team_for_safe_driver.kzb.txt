@@ -158,14 +158,11 @@ Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Point1
 Screens/Screen/RootPage/Speedometer/Car/car/RootNode/Point
 Screens/Screen/RootPage/Speedometer/Car/car/RootNode
 Screens/Screen/RootPage/Speedometer/Car/car
-Screens/Screen/RootPage/Speedometer/Speedometer
-Screens/Screen/RootPage/Speedometer/Text Block 2D_1
 Screens/Screen/RootPage/Speedometer/Lines
 Screens/Screen/RootPage/Speedometer/Car
 Screens/Screen/RootPage/Speedometer/Text Block 2D_2
-Screens/Screen/RootPage/Speedometer/Progress Bar
 Screens/Screen/RootPage/Speedometer/Text Block 2D_3
-Screens/Screen/RootPage/Speedometer/Text Block 2D
+Screens/Screen/RootPage/Speedometer/Progress Bar_1
 Screens/Screen/RootPage/Speedometer/Cluster Gauges
 Screens/Screen/RootPage/Media/Controls/MediaControls/SongInfo/SongName
 Screens/Screen/RootPage/Media/Controls/MediaControls/SongInfo/Artist
@@ -197,6 +194,12 @@ Screens/Screen/RootPage/Media/Controls
 Screens/Screen/RootPage/Media/Playlist
 Screens/Screen/RootPage/Media/Media
 Screens/Screen/RootPage/Media/speedometer_small
+Screens/Screen/RootPage/Weather/Background
+Screens/Screen/RootPage/Weather/Prefab Placeholder 2D
+Screens/Screen/RootPage/Weather/Text Block 2D
+Screens/Screen/RootPage/Weather/Speedometer
+Screens/Screen/RootPage/Weather/Coverflow
+Screens/Screen/RootPage/Weather/Button 2D
 Screens/Screen/RootPage/System/Car/car/RootNode/Camera_Root/Camera
 Screens/Screen/RootPage/System/Car/car/RootNode/Camera_Root/Camera_Interest
 Screens/Screen/RootPage/System/Car/car/RootNode/Car/Car_Bottom
@@ -227,68 +230,6 @@ Screens/Screen/RootPage/System/Parking
 Screens/Screen/RootPage/System/Car
 Screens/Screen/RootPage/System/speedometer_small
 Screens/Screen/RootPage/System/ControlButtons
-Screens/Screen/RootPage/Services/Titles/System
-Screens/Screen/RootPage/Services/Titles/Cluster
-Screens/Screen/RootPage/Services/Titles/Media
-Screens/Screen/RootPage/Services/Titles/Weather
-Screens/Screen/RootPage/Services/Titles/Sensor
-Screens/Screen/RootPage/Services/Titles/Sensor_1
-Screens/Screen/RootPage/Services/Titles/Sensor_2
-Screens/Screen/RootPage/Services/Services/ClusterServices/Speed
-Screens/Screen/RootPage/Services/Services/ClusterServices/RPM
-Screens/Screen/RootPage/Services/Services/ClusterServices/Power
-Screens/Screen/RootPage/Services/Services/ClusterServices/Gear
-Screens/Screen/RootPage/Services/Services/SystemServices/Time_12h
-Screens/Screen/RootPage/Services/Services/SystemServices/Time
-Screens/Screen/RootPage/Services/Services/SystemServices/period
-Screens/Screen/RootPage/Services/Services/SystemServices/Date
-Screens/Screen/RootPage/Services/Services/MediaServices/Position
-Screens/Screen/RootPage/Services/Services/MediaServices/Duration
-Screens/Screen/RootPage/Services/Services/MediaServices/Service_icon
-Screens/Screen/RootPage/Services/Services/MediaServices/Offset
-Screens/Screen/RootPage/Services/Services/MediaServices/ID
-Screens/Screen/RootPage/Services/Services/MediaServices/Name
-Screens/Screen/RootPage/Services/Services/MediaServices/Tracks
-Screens/Screen/RootPage/Services/Services/MediaServices/Artist
-Screens/Screen/RootPage/Services/Services/MediaServices/Song
-Screens/Screen/RootPage/Services/Services/WeatherServices/Temp
-Screens/Screen/RootPage/Services/Services/WeatherServices/WindSpeed
-Screens/Screen/RootPage/Services/Services/WeatherServices/WindDirection
-Screens/Screen/RootPage/Services/Services/WeatherServices/Humidity
-Screens/Screen/RootPage/Services/Services/WeatherServices/Cloudiness
-Screens/Screen/RootPage/Services/Services/WeatherServices/icon
-Screens/Screen/RootPage/Services/Services/SensorService/AccelometerX
-Screens/Screen/RootPage/Services/Services/SensorService/AccelometerY
-Screens/Screen/RootPage/Services/Services/SensorService/AccelometerZ
-Screens/Screen/RootPage/Services/Services/SensorService/Compass
-Screens/Screen/RootPage/Services/Services/SensorService/Compass_X
-Screens/Screen/RootPage/Services/Services/SensorService/Compass_Y
-Screens/Screen/RootPage/Services/Services/SensorService/Compass_Z
-Screens/Screen/RootPage/Services/Services/SensorService_1/Gyroscope
-Screens/Screen/RootPage/Services/Services/SensorService_1/GyroscopeX
-Screens/Screen/RootPage/Services/Services/SensorService_1/GyroscopeY
-Screens/Screen/RootPage/Services/Services/SensorService_1/GyroscopeZ
-Screens/Screen/RootPage/Services/Services/SensorService_1/Pressure
-Screens/Screen/RootPage/Services/Services/SensorService_1/Pressure value
-Screens/Screen/RootPage/Services/Services/SensorService_2/Gravity
-Screens/Screen/RootPage/Services/Services/SensorService_2/Gravity_X
-Screens/Screen/RootPage/Services/Services/SensorService_2/Gravity_Y
-Screens/Screen/RootPage/Services/Services/SensorService_2/Gravity_Z
-Screens/Screen/RootPage/Services/Services/ClusterServices
-Screens/Screen/RootPage/Services/Services/SystemServices
-Screens/Screen/RootPage/Services/Services/MediaServices
-Screens/Screen/RootPage/Services/Services/WeatherServices
-Screens/Screen/RootPage/Services/Services/SensorService
-Screens/Screen/RootPage/Services/Services/SensorService_1
-Screens/Screen/RootPage/Services/Services/SensorService_2
-Screens/Screen/RootPage/Services/Titles
-Screens/Screen/RootPage/Services/Services
-Screens/Screen/RootPage/Sensor/Perimeter/Dot
-Screens/Screen/RootPage/Sensor/Perimeter
-Screens/Screen/RootPage/Sensor/G-meter
-Screens/Screen/RootPage/Attention/Att_pic
-Screens/Screen/RootPage/Attention/Eyes
-Screens/Screen/RootPage/Attention/Att
 Screens/Screen/RootPage/Warning/Car/car/RootNode/Camera_Root/Camera
 Screens/Screen/RootPage/Warning/Car/car/RootNode/Camera_Root/Camera_Interest
 Screens/Screen/RootPage/Warning/Car/car/RootNode/Car/Car_Bottom
@@ -338,12 +279,9 @@ Screens/Screen/RootPage/Heartrate (stressed)/Heartrate
 Screens/Screen/RootPage/Heartrate (stressed)/Heart
 Screens/Screen/RootPage/Heartrate (stressed)/Heart_transp
 Screens/Screen/RootPage/Heartrate (stressed)/Heartrate_1
-Screens/Screen/RootPage/Weather/Background
-Screens/Screen/RootPage/Weather/Prefab Placeholder 2D
-Screens/Screen/RootPage/Weather/Text Block 2D
-Screens/Screen/RootPage/Weather/Speedometer
-Screens/Screen/RootPage/Weather/Coverflow
-Screens/Screen/RootPage/Weather/Button 2D
+Screens/Screen/RootPage/Attention/Att_pic
+Screens/Screen/RootPage/Attention/Eyes
+Screens/Screen/RootPage/Attention/Att
 Screens/Screen/RootPage/Frame/Frame/RootNode/Frame
 Screens/Screen/RootPage/Frame/Frame/RootNode
 Screens/Screen/RootPage/Frame/Frame/Camera
@@ -362,13 +300,11 @@ Screens/Screen/RootPage/Header/Blinker_right
 Screens/Screen/RootPage/BG
 Screens/Screen/RootPage/Speedometer
 Screens/Screen/RootPage/Media
+Screens/Screen/RootPage/Weather
 Screens/Screen/RootPage/System
-Screens/Screen/RootPage/Services
-Screens/Screen/RootPage/Sensor
-Screens/Screen/RootPage/Attention
 Screens/Screen/RootPage/Warning
 Screens/Screen/RootPage/Heartrate (stressed)
-Screens/Screen/RootPage/Weather
+Screens/Screen/RootPage/Attention
 Screens/Screen/RootPage/Alert
 Screens/Screen/RootPage/Frame
 Screens/Screen/RootPage/NavigationButtons
